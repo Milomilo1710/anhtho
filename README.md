@@ -59,7 +59,10 @@ Thêm mục Gallery dưới mục Project
 </section>
 
 5. Ý tưởng thiết kế tổng thể
+
 Phong cách: Đơn giản, dễ thương
+
 Màu chủ đạo: Hồng, xanh da trời, trắng
+
 Bố cục: Đối xứng
 
