@@ -1,143 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Nguyễn Anh Thơ Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #ec4899);
+      background-size: 400% 400%;
+      animation: gradientMove 10s ease infinite;
+      overflow-x: hidden;
+    }
 
-    <!-- FONT Poppins (hỗ trợ tiếng Việt) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
 
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background: linear-gradient(to right, #ffd6ec, #d6f0ff);
-        }
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
 
-        section {
-            padding: 60px 10%;
-        }
+    .glow:hover {
+      box-shadow: 0 0 20px rgba(236,72,153,0.6);
+      transform: scale(1.05);
+    }
 
-        .hero {
-            background: linear-gradient(to right, #ff9ecf, #8fd3ff);
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
 
-        h1 {
-            font-size: 45px;
-        }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-        h2 {
-            text-align: center;
-            color: #ff6fa5;
-        }
-
-        .container {
-            display: flex;
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .box {
-            background: white;
-            padding: 25px;
-            border-radius: 20px;
-            flex: 1;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
-
-        .box:hover {
-            transform: translateY(-10px);
-        }
-
-        .center-box {
-            width: 60%;
-            margin: 20px auto;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #ff6fa5;
-            color: white;
-            border-radius: 20px;
-            text-decoration: none;
-        }
-
-        .btn:hover {
-            background: #ff3f8f;
-        }
-
-    </style>
+    .cursor {
+      width: 20px;
+      height: 20px;
+      border: 2px solid white;
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: 0.1s;
+      z-index: 999;
+    }
+  </style>
 </head>
-
 <body>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h1>🎀Nguyễn Anh Thơ🎀</h1>
-        <p>🎨 UI/UX Designer tương lai | Đam mê thiết kế & sáng tạo 🎨</p>
-        <a href="#projects" class="btn">Xem dự án của tui 💖</a>
-    </section>
+<div class="cursor" id="cursor"></div>
 
-    <!-- ABOUT -->
-    <section>
-        <h2>About me 👩‍🎓</h2>
-        <div class="box center-box">
-            <p>Tôi là sinh viên trường Đại học Gia Định, đang theo đuổi lĩnh vực UI/UX Design và 3D. Tôi yêu thích việc biến ý tưởng thành giao diện trực quan, dễ sử dụng và mang tính thẩm mỹ cao.</p>
+<!-- NAV -->
+<nav class="fixed w-full top-0 p-4 flex justify-between items-center text-white z-50">
+  <h1 class="text-xl font-bold">Milo</h1>
+  <div class="space-x-6 hidden md:block">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="h-screen flex flex-col justify-center items-center text-center text-white px-4">
+  <h1 class="text-5xl font-bold mb-4">Hi, I'm Milo 👋</h1>
+  <p class="text-lg opacity-80">Frontend Developer | UI/UX Designer</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="p-10 fade-in">
+  <div class="glass p-6 max-w-4xl mx-auto text-white">
+    <h2 class="text-3xl mb-4">About Me</h2>
+    <p>I create modern, interactive and aesthetic digital experiences.</p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="p-10 fade-in">
+  <div class="max-w-4xl mx-auto text-white">
+    <h2 class="text-3xl mb-6">Skills</h2>
+    <div class="space-y-4">
+      <div>
+        <p>HTML</p>
+        <div class="w-full bg-gray-700 h-2 rounded">
+          <div class="bg-pink-400 h-2 rounded" style="width:90%"></div>
         </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section>
-        <h2 id="projects">Projects 📝</h2>
-        <div class="container">
-            <div class="box">
-                <h3>🌸 UI App Design</h3>
-                <p>Thiết kế giao diện ứng dụng đơn giản, tập trung vào trải nghiệm người dùng.</p>
-                <p><b>Vai trò:</b> Thiết kế UI</p>
-            </div>
-
-            <div class="box">
-                <h3>🌸 3D Character</h3>
-                <p>Thiết kế và dựng model nhân vật 3D bằng Blender.</p>
-                <p><b>Vai trò:</b> Model & Render</p>
-            </div>
+      </div>
+      <div>
+        <p>CSS</p>
+        <div class="w-full bg-gray-700 h-2 rounded">
+          <div class="bg-blue-400 h-2 rounded" style="width:85%"></div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- SKILLS -->
-    <section>
-        <h2>Skills & Experience 😎</h2>
-        <div class="container">
-            <div class="box">
-                <h3>💙 Kỹ năng</h3>
-                <p>HTML, CSS</p>
-                <p>Photoshop, Illustrator</p>
-                <p>Blender (3D)</p>
-            </div>
+<!-- PROJECTS -->
+<section id="projects" class="p-10 fade-in">
+  <div class="max-w-6xl mx-auto text-white">
+    <h2 class="text-3xl mb-6">Projects</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="glass p-4 glow">Project 1</div>
+      <div class="glass p-4 glow">Project 2</div>
+      <div class="glass p-4 glow">Project 3</div>
+    </div>
+  </div>
+</section>
 
-            <div class="box">
-                <h3>📊 Mức độ</h3>
-                <p>UI/UX: ⭐⭐⭐⭐</p>
-                <p>Design: ⭐⭐⭐⭐</p>
-                <p>3D: ⭐⭐⭐</p>
-            </div>
-        </div>
-    </section>
+<!-- CONTACT -->
+<section id="contact" class="p-10 fade-in">
+  <div class="glass p-6 max-w-xl mx-auto text-white">
+    <h2 class="text-3xl mb-4">Contact</h2>
+    <input class="w-full p-2 mb-3 rounded bg-white/20" placeholder="Your email">
+    <textarea class="w-full p-2 mb-3 rounded bg-white/20" placeholder="Message"></textarea>
+    <button class="bg-pink-500 px-4 py-2 rounded">Send</button>
+  </div>
+</section>
 
-    <!-- CONTACT -->
-    <section>
-        <h2>Contact 💌</h2>
-        <div class="box center-box">
-            <p>Email: nguyenanhtho@gmail.com</p>
-            <p>SĐT: 0397777777</p>
-            <a href="#" class="btn">Liên hệ ngay 💖</a>
-        </div>
-    </section>
+<!-- FOOTER -->
+<footer class="text-center text-white p-4">© 2026 Milo</footer>
+
+<script>
+// Scroll animation
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Cursor effect
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+</script>
 
 </body>
 </html>
