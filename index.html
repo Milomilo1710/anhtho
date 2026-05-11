@@ -10,77 +10,128 @@
         }
 
         section {
-            padding: 50px;
-            text-align: center;
+            padding: 60px 10%;
         }
 
         .hero {
             background: linear-gradient(to right, #ff9ecf, #8fd3ff);
             color: white;
-            padding: 80px 20px;
+            text-align: center;
+            padding: 100px 20px;
         }
 
         h1 {
-            font-size: 40px;
+            font-size: 45px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ff6fa5;
+        }
+
+        .container {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
         }
 
         .box {
             background: white;
-            padding: 20px;
-            margin: 20px auto;
+            padding: 25px;
             border-radius: 20px;
-            width: 80%;
+            flex: 1;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: 0.3s;
         }
 
         .box:hover {
-            transform: scale(1.05);
+            transform: translateY(-10px);
         }
 
-        h2 {
-            color: #ff6fa5;
+        .center-box {
+            width: 60%;
+            margin: 20px auto;
         }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #ff6fa5;
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #ff3f8f;
+        }
+
     </style>
 </head>
 
 <body>
 
+    <!-- HERO -->
     <section class="hero">
-        <h1>🎀Nguyễn Anh Thơ🎀</h1>
-        <p>🎨Future UI/UX Designer🎨</p>
+        <h1>🎀 Nguyễn Anh Thơ 🎀</h1>
+        <p>🎨 UI/UX Designer tương lai | Đam mê thiết kế & sáng tạo 🎨</p>
+        <a href="#" class="btn">Xem dự án của tui 💖</a>
     </section>
 
+    <!-- ABOUT -->
     <section>
-        <h2>About me👩‍🎓</h2>
-        <div class="box">
-            <p>Tôi tên là Nguyễn Anh Thơ, sinh viên trường đại học Gia Định và đang học UI/UX + 3D 🎓🎨 </p>
+        <h2>About me 👩‍🎓</h2>
+        <div class="box center-box">
+            <p>Tôi là sinh viên trường Đại học Gia Định, đang theo đuổi lĩnh vực UI/UX Design và 3D. Tôi yêu thích việc biến ý tưởng thành giao diện trực quan, dễ sử dụng và mang tính thẩm mỹ cao.</p>
         </div>
     </section>
 
+    <!-- PROJECTS -->
     <section>
-        <h2>Projects📝</h2>
-        <div class="box">
-            <p>🌸 Thiết kế UI app đơn giản</p>
-            <p>🌸 Model 3D nhân vật</p>
+        <h2>Projects 📝</h2>
+        <div class="container">
+            <div class="box">
+                <h3>🌸 UI App Design</h3>
+                <p>Thiết kế giao diện ứng dụng đơn giản, tập trung vào trải nghiệm người dùng.</p>
+                <p><b>Vai trò:</b> Thiết kế UI</p>
+            </div>
+
+            <div class="box">
+                <h3>🌸 3D Character</h3>
+                <p>Thiết kế và dựng model nhân vật 3D bằng Blender.</p>
+                <p><b>Vai trò:</b> Model & Render</p>
+            </div>
         </div>
     </section>
 
+    <!-- SKILLS -->
     <section>
-        <h2>Skills😎🎨</h2>
-        <div class="box">
-            <p>💙 HTML, CSS</p>
-            <p>💙 Photoshop</p>
-            <p>💙 Blender</p>
-            <p>💙 Illustrator</p>
+        <h2>Skills & Experience 😎</h2>
+        <div class="container">
+            <div class="box">
+                <h3>💙 Kỹ năng</h3>
+                <p>HTML, CSS</p>
+                <p>Photoshop, Illustrator</p>
+                <p>Blender (3D)</p>
+            </div>
+
+            <div class="box">
+                <h3>📊 Mức độ</h3>
+                <p>UI/UX: ⭐⭐⭐⭐☆</p>
+                <p>Design: ⭐⭐⭐⭐☆</p>
+                <p>3D: ⭐⭐⭐☆☆</p>
+            </div>
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section>
-        <h2>Contact</h2>
-        <div class="box">
-            <p>💌Email: nguyenanhtho@gmail.com</p>
-            <p>📞Sđt: 0397777777</p>
+        <h2>Contact 💌</h2>
+        <div class="box center-box">
+            <p>Email: nguyenanhtho@gmail.com</p>
+            <p>SĐT: 0397777777</p>
+            <a href="#" class="btn">Liên hệ ngay 💖</a>
         </div>
     </section>
 
