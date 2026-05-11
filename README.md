@@ -27,7 +27,9 @@ Cảm giác dễ thương nhưng vẫn chuyên nghiệp
 Prompt tạo ảnh minh họa trên Canva:
 
 Ảnh 1: Thiết kế website portfolio hiện đại, giao diện người dùng/trải nghiệm người dùng (UI/UX), bố cục gọn gàng và tối giản, nền trắng và xám nhạt, kiểu chữ trang nhã, bố cục dạng lưới, khoảng cách mượt mà, các phần tương tác (giới thiệu, dự án, liên hệ), thẻ hiệu ứng kính, đổ bóng tinh tế, thẩm mỹ công nghệ cao cấp, thiết kế web đáp ứng, mô hình kiểu Figma, độ phân giải 4K, chi tiết cực cao, giới thiệu nhà thiết kế chuyên nghiệp.
+
 Ảnh 2: Thiết kế UI/UX ứng dụng di động phong cách dễ thương Gen Z, màu pastel nhẹ nhàng, icon vui nhộn, giao diện mềm mại bo tròn, sticker UI, phong cách, bố cục chat app và mạng xã hội, thiết kế hiện đại, Figma mockup, bố cục ngang 16:9, hiển thị toàn giao diện, 4k
+
 Ảnh 3: Thiết kế UI/UX desktop cho phần mềm sáng tạo hoặc game studio, giao diện hiện đại, hiệu ứng neon nhẹ, bảng điều khiển, thư viện dự án, thanh công cụ bên trái, phong cách sci-fi nhưng gọn gàng, UI chuyên nghiệp như phần mềm Adobe hoặc game engine, bố cục ngang 16:9, full desktop screen, 4k
 
 4. Quá trình chỉnh sửa kết quả AI
