@@ -1,10 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Nguyễn Anh Thơ | UI/UX & 3D Designer</title>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #ffffff;
+            color: #222;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+        }
+
+        header h2 {
+            color: #ff4da6;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #87CEFA;
+        }
+
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            position: relative;
+        }
+
+        .blob {
+            position: absolute;
+            right: -100px;
+            top: -100px;
+            width: 400px;
+            height: 400px;
+            background: #87CEFA;
+            border-radius: 50% 40% 60% 70%;
+            filter: blur(50px);
+        }
+
+        .hero-content {
+            max-width: 600px;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.4;
+        }
+
+        .highlight {
+            color: #ff4da6;
+        }
+
+        .hero p {
+            margin: 20px 0;
+            color: #555;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            background: #87CEFA;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ff4da6;
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        h2.section-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        /* ABOUT */
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .about-img {
+            flex: 1;
+            text-align: center;
+        }
+
+        .about-img img {
+            width: 280px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        /* PROJECTS */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #f9f9f9;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 15px;
+        }
+
+        /* SKILLS */
+        .skills-box {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 15px;
+            max-width: 500px;
+        }
+
+        .skills-box p {
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        /* CONTACT */
+        .contact p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f5f5f5;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Anh Thơ</h2>
+    <nav>
+        <a href="#home">Trang chủ</a>
+        <a href="#about">Giới thiệu</a>
+        <a href="#projects">Dự án</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="blob"></div>
+
+    <div class="hero-content">
+        <h1>
+            Xin chào, tôi là <span class="highlight">Nguyễn Anh Thơ</span><br>
+            Nhà thiết kế <span class="highlight">UI/UX & 3D</span>
+        </h1>
+
+        <p>
+            Tôi tạo ra những trải nghiệm số hiện đại, tinh tế và mang tính ứng dụng cao.
+        </p>
+
+        <a href="#projects" class="btn">Xem dự án</a>
+    </div>
+</section>
+
 <!-- ABOUT -->
 <section class="about" id="about">
     <h2 class="section-title">Giới thiệu</h2>
 
     <div class="about-container">
-        
-        <!-- TEXT -->
         <div class="about-text">
             <p>
                 Tôi là một nhà thiết kế UI/UX và 3D với niềm đam mê sáng tạo ra những sản phẩm
@@ -18,21 +229,102 @@
 
             <p>
                 Trong quá trình học tập và thực hành, tôi đã tham gia nhiều dự án từ thiết kế website,
-                ứng dụng mobile đến xây dựng mô hình 3D. Tôi không ngừng học hỏi và cập nhật xu hướng
-                mới để nâng cao kỹ năng và tư duy thiết kế.
+                ứng dụng mobile đến xây dựng mô hình 3D.
             </p>
 
             <p>
-                Mục tiêu của tôi là trở thành một UI/UX Designer chuyên nghiệp, có thể tạo ra
-                những sản phẩm vừa đẹp mắt vừa có giá trị thực tế cao.
+                Mục tiêu của tôi là trở thành một UI/UX Designer chuyên nghiệp với tư duy sáng tạo
+                và khả năng giải quyết vấn đề hiệu quả.
             </p>
         </div>
 
-        <!-- IMAGE -->
         <div class="about-img">
-            <!-- 👉 DÁN LINK ẢNH CỦA NÍ -->
             <img src="LINK_ANH_CUA_BAN" alt="Ảnh cá nhân">
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+    <h2 class="section-title">Dự án</h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <img src="LINK_ANH_1">
+            <div class="project-content">
+                <h3>Mobile UI</h3>
+                <p>Giao diện ứng dụng hiện đại.</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="LINK_ANH_2">
+            <div class="project-content">
+                <h3>Portfolio</h3>
+                <p>Website cá nhân tinh tế.</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="LINK_ANH_3">
+            <div class="project-content">
+                <h3>3D Design</h3>
+                <p>Mô hình 3D chân thực.</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="LINK_ANH_4">
+            <div class="project-content">
+                <h3>Landing Page</h3>
+                <p>Thiết kế tối ưu chuyển đổi.</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="LINK_ANH_5">
+            <div class="project-content">
+                <h3>App Redesign</h3>
+                <p>Cải tiến UX/UI.</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="LINK_ANH_6">
+            <div class="project-content">
+                <h3>3D Render</h3>
+                <p>Render sản phẩm chuyên nghiệp.</p>
+            </div>
         </div>
 
     </div>
 </section>
+
+<!-- SKILLS -->
+<section class="skills">
+    <h2 class="section-title">Kỹ năng</h2>
+
+    <div class="skills-box">
+        <p><strong>UI/UX Design</strong></p>
+        <p><strong>3D Modeling</strong></p>
+        <p><strong>Wireframe / Prototype</strong></p>
+        <p><strong>Tools:</strong> Figma, Blender, Photoshop</p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2 class="section-title">Liên hệ</h2>
+
+    <p>Email: nguyentho@example.com</p>
+    <p>Behance: behance.net/anhtho</p>
+    <p>Facebook: fb.com/anhtho</p>
+</section>
+
+<footer>
+    © 2026 Nguyễn Anh Thơ
+</footer>
+
+</body>
+</html>
