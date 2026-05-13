@@ -115,17 +115,59 @@ section{
     margin:auto;
 }
 
-.project-title{
+/* BLOCK */
+.project-block{
+    margin-bottom:80px;
+}
+
+/* TITLE LEFT */
+.project-label{
     font-size:32px;
-    margin-bottom:30px;
+    margin-bottom:25px;
     text-align:left;
 }
 
-/* ROW */
-.projects-row{
+/* UI/UX */
+.projects-top{
     display:flex;
     gap:30px;
-    margin-bottom:40px;
+}
+
+/* ẢNH DỌC */
+.vertical{
+    width:30%;
+    height:420px;
+}
+
+/* 3D LAYOUT */
+.projects-3d{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+/* HÀNG TRÊN */
+.row-top{
+    display:flex;
+    gap:30px;
+}
+
+/* ẢNH NGANG */
+.horizontal{
+    flex:1;
+    height:220px;
+}
+
+/* HÀNG DƯỚI */
+.row-bottom{
+    display:flex;
+    justify-content:center;
+}
+
+/* ẢNH TO DƯỚI */
+.big{
+    width:60%;
+    height:260px;
 }
 
 /* CARD */
@@ -144,27 +186,6 @@ section{
 
 .project-card:hover img{
     transform:scale(1.08);
-}
-
-/* ẢNH DỌC */
-.vertical{
-    width:30%;
-    height:420px;
-}
-
-/* ẢNH NGANG */
-.horizontal{
-    flex:1;
-    height:260px;
-}
-
-/* XẾP TẦNG */
-.bottom-row .project-card:nth-child(2){
-    transform:translateY(40px);
-}
-
-.bottom-row .project-card:nth-child(3){
-    transform:translateY(80px);
 }
     
 /* SKILLS */
@@ -274,45 +295,40 @@ footer{
 
 <!-- PROJECTS -->
 <section class="projects-section">
+    <h2 class="main-title">📝Projects📝</h2>
 
-    <h2 class="project-title">UI/UX</h2>
+    <!-- UI/UX -->
+    <div class="project-block">
+        <h2 class="project-label">UI/UX</h2>
 
-    <!-- HÀNG TRÊN -->
-    <div class="projects-row top-row">
-
-        <div class="project-card vertical glass">
-            <img src="YOUR_PROJECT_1">
+        <div class="projects-top">
+            <div class="project-card vertical glass"><img src="YOUR_PROJECT_1"></div>
+            <div class="project-card vertical glass"><img src="YOUR_PROJECT_2"></div>
+            <div class="project-card vertical glass"><img src="YOUR_PROJECT_3"></div>
         </div>
-
-        <div class="project-card vertical glass">
-            <img src="YOUR_PROJECT_2">
-        </div>
-
-        <div class="project-card vertical glass">
-            <img src="YOUR_PROJECT_3">
-        </div>
-
     </div>
 
-    <!-- HÀNG DƯỚI -->
-    <div class="projects-row bottom-row">
+    <!-- 3D -->
+    <div class="project-block">
+        <h2 class="project-label">3D</h2>
 
-        <div class="project-card horizontal glass">
-            <img src="YOUR_PROJECT_4">
+        <div class="projects-3d">
+
+            <!-- hàng trên -->
+            <div class="row-top">
+                <div class="project-card horizontal glass"><img src="YOUR_PROJECT_4"></div>
+                <div class="project-card horizontal glass"><img src="YOUR_PROJECT_5"></div>
+            </div>
+
+            <!-- ảnh dưới -->
+            <div class="row-bottom">
+                <div class="project-card big glass"><img src="YOUR_PROJECT_6"></div>
+            </div>
+
         </div>
-
-        <div class="project-card horizontal glass">
-            <img src="YOUR_PROJECT_5">
-        </div>
-
-        <div class="project-card horizontal glass">
-            <img src="YOUR_PROJECT_6">
-        </div>
-
     </div>
 
 </section>
-
 <!-- SKILLS -->
 <section>
     <h2 style="text-align:center;">😎Skills😎</h2>
