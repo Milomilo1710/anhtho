@@ -28,21 +28,24 @@ body{
     border:1px solid rgba(255,255,255,0.2);
 }
 
+/* SECTION */
 section{
     padding:80px 8%;
 }
 
-/* HERO MỚI */
+/* HERO FIX CHUẨN */
 .hero{
     position:relative;
     display:flex;
     align-items:center;
     min-height:100vh;
+    padding-left:8%;
     overflow:hidden;
 }
 
+/* TEXT */
 .hero-text{
-    max-width:650px;
+    max-width:600px;
     z-index:2;
 }
 
@@ -54,6 +57,7 @@ section{
     line-height:1.8;
 }
 
+/* BUTTON */
 .btn{
     margin-top:25px;
     display:inline-block;
@@ -67,7 +71,7 @@ section{
 
 .btn:hover{ transform:scale(1.1); }
 
-/* ẢNH HERO TO */
+/* ẢNH TO */
 .hero-img{
     position:absolute;
     top:0;
@@ -82,7 +86,7 @@ section{
     object-fit:cover;
 }
 
-/* FADE MỜ */
+/* FADE */
 .hero-img::after{
     content:"";
     position:absolute;
@@ -90,7 +94,7 @@ section{
     left:0;
     width:100%;
     height:100%;
-    background: linear-gradient(to left, transparent, #6ecbff 80%);
+    background: linear-gradient(to left, transparent, rgba(110,203,255,1) 80%);
 }
 
 /* ABOUT */
@@ -233,17 +237,88 @@ footer{
 
         <p>
             ✒️Tôi không bắt đầu với việc thiết kế cho đẹp, mà bắt đầu bằng việc hiểu cảm xúc của người dùng. 
-            Mỗi sản phẩm tôi tạo ra đều là sự kết hợp giữa logic và nghệ thuật — nơi trải nghiệm và thẩm mỹ hòa làm một.
-            Từ những wireframe đơn giản đến các sản phẩm hoàn chỉnh, tôi luôn tìm cách tạo ra những trải nghiệm có chiều sâu.
+            Mỗi sản phẩm tôi tạo ra đều là sự kết hợp giữa logic và nghệ thuật.
         </p>
 
         <a href="#contact" class="btn">Let’s Work Together</a>
     </div>
 
-    <!-- ẢNH BỰ -->
     <div class="hero-img">
         <img src="https://github.com/Milomilo1710/anhtho/blob/main/avt.jpg?raw=true">
     </div>
 </section>
 
-<!-- PHẦN DƯỚI GIỮ NGUYÊN -->
+<!-- ABOUT -->
+<section class="about">
+    <div class="card glass">
+        <h2>About Me👩‍🎨</h2>
+        <p>Designer tập trung UX & thẩm mỹ hiện đại.</p>
+    </div>
+
+    <div class="card glass">
+        <h2>🎯My Direction🎯</h2>
+        <p>Trở thành Product Designer toàn diện.</p>
+    </div>
+</section>
+
+<!-- STRENGTHS -->
+<section>
+    <h2 style="text-align:center;">💪Strengths💪</h2>
+
+    <div class="strengths">
+        <div class="strength-item glass"><span class="strength-title">UI/UX Design</span><span>Experience</span></div>
+        <div class="strength-item glass"><span class="strength-title">3D Modeling</span><span>Visual</span></div>
+        <div class="strength-item glass"><span class="strength-title">Wireframe</span><span>Flow</span></div>
+        <div class="strength-item glass"><span class="strength-title">Tools</span><span>Figma • Blender • Photoshop</span></div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+    <h2 style="text-align:center; margin-bottom:40px;">📝Projects📝</h2>
+
+    <div class="projects">
+        <div class="project-card glass"><img src="YOUR_PROJECT_1"></div>
+        <div class="project-card glass"><img src="YOUR_PROJECT_2"></div>
+        <div class="project-card glass"><img src="YOUR_PROJECT_3"></div>
+        <div class="project-card glass"><img src="YOUR_PROJECT_4"></div>
+        <div class="project-card glass"><img src="YOUR_PROJECT_5"></div>
+        <div class="project-card glass"><img src="YOUR_PROJECT_6"></div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+    <h2 style="text-align:center;">😎Skills😎</h2>
+
+    <div class="skills">
+        <div class="skill">
+            <div class="skill-title"><span>UI/UX</span><span>90%</span></div>
+            <div class="progress"><span style="width:90%"></span></div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-title"><span>3D</span><span>85%</span></div>
+            <div class="progress"><span style="width:85%"></span></div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2>💌Let’s Work Together💌</h2>
+
+    <form class="glass" style="padding:30px; max-width:500px; margin:auto;">
+        <input type="text">
+        <input type="email">
+        <textarea></textarea>
+        <button class="btn">Send</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Portfolio Designer
+</footer>
+
+</body>
+</html>
