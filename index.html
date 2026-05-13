@@ -1,236 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <title>Nguyễn Anh Thơ Portfolio</title>
+    <meta charset="UTF-8">
+    <title>Hero Section</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background: #f9fbff;
+            background: #ffffff;
         }
 
-        /* NAVBAR */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px 10%;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-        }
-
-        nav a {
-            text-decoration: none;
-            margin-left: 20px;
-            color: #333;
-            font-weight: 500;
-        }
-
-        /* HERO */
         .hero {
+            position: relative;
+            height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding: 80px 10%;
-            background: linear-gradient(135deg, #ffd6ec, #d6f0ff);
+            justify-content: center;
+            padding: 0 10%;
+            overflow: hidden;
         }
 
-        .hero-text {
-            width: 50%;
+        /* Blob shape */
+        .blob {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: #87CEFA; /* Sky Blue */
+            border-radius: 50% 40% 60% 70%;
+            filter: blur(40px);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
         }
 
         .hero h1 {
             font-size: 48px;
-            color: #ff6fa5;
+            font-weight: 700;
+            color: #222;
+            line-height: 1.4;
+        }
+
+        .highlight {
+            color: #ff4da6; /* Pink */
         }
 
         .hero p {
-            font-size: 18px;
-            margin-top: 10px;
+            margin: 20px 0;
+            font-size: 16px;
+            color: #555;
         }
 
-        .hero-img {
-            width: 40%;
-        }
-
-        .hero-img img {
-            width: 100%;
-            border-radius: 20px;
-        }
-
-        /* SECTION */
-        section {
-            padding: 70px 10%;
-        }
-
-        h2 {
-            text-align: center;
-            color: #ff6fa5;
-        }
-
-        /* CARD */
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #87CEFA;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
             transition: 0.3s;
         }
 
-        .card:hover {
-            transform: translateY(-10px);
+        .cta-btn:hover {
+            background: #ff4da6;
         }
-
-        /* GRID */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-
-        /* GALLERY */
-        .img-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 15px;
-        }
-
-        /* BUTTON */
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background: linear-gradient(135deg, #ff6fa5, #8fd3ff);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            margin-top: 15px;
-        }
-
     </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav>
-    <div><b>Portfolio</b></div>
-    <div>
-        <a href="#">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+    <section class="hero">
+        <div class="blob"></div>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-text">
-        <h1>Nguyễn Anh Thơ🎀</h1>
-        <p>🎨UI/UX Designer tương lai | Đam mê thiết kế & sáng tạo | Luôn hướng đến trải nghiệm người dùng tốt nhất🎨</p>
-        <a href="#" class="btn">Xem dự án</a>
-    </div>
+        <div class="hero-content">
+            <h1>
+                Thiết kế <span class="highlight">UI/UX hiện đại</span><br>
+                cho trải nghiệm <span class="highlight">đỉnh cao</span>
+            </h1>
 
-    <div class="hero-img">
-        <img src="https://i.pinimg.com/564x/9b/4c/91/9b4c91f70dfb73cda3f7fbcfd3d6b33b.jpg">
-    </div>
-</section>
+            <p>
+                Tạo ra những sản phẩm số đẹp mắt, dễ sử dụng và mang lại cảm xúc tốt nhất cho người dùng.
+            </p>
 
-<!-- ABOUT -->
-<section>
-    <h2>About me👩‍🎓</h2>
-    <div class="card">
-        <p>Tôi là Nguyễn Anh Thơ, hiện đang theo đuổi lĩnh vực UI/UX Design và thiết kế 3D. Tôi có niềm đam mê với việc sáng tạo giao diện trực quan, hiện đại và thân thiện với người dùng.</p>
-        <p>Trong quá trình học tập, tôi luôn cố gắng nâng cao kỹ năng thiết kế, tìm hiểu các xu hướng mới và áp dụng chúng vào sản phẩm của mình.</p>
-        <p>Mục tiêu của tôi là trở thành một UI/UX Designer chuyên nghiệp, có khả năng tạo ra những sản phẩm không chỉ đẹp mà còn mang lại trải nghiệm tốt nhất cho người dùng.</p>
-    </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-    <h2>Projects📝</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>🌸UI App Design</h3>
-            <p>Thiết kế giao diện ứng dụng với phong cách hiện đại, tập trung vào trải nghiệm người dùng và tính thẩm mỹ.</p>
-            <p>Dự án này giúp tôi hiểu rõ hơn về bố cục, màu sắc và cách tổ chức nội dung trong thiết kế UI.</p>
-            <p><b>Vai trò:</b> Thiết kế UI, nghiên cứu bố cục</p>
+            <a href="#" class="cta-btn">Bắt đầu ngay</a>
         </div>
-
-        <div class="card">
-            <h3>🌸3D Character</h3>
-            <p>Thiết kế và dựng model nhân vật 3D bằng Blender, bao gồm tạo hình, ánh sáng và render.</p>
-            <p>Dự án giúp tôi phát triển khả năng tư duy không gian và kỹ năng thiết kế 3D.</p>
-            <p><b>Vai trò:</b> Model & Render</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- GALLERY -->
-<section>
-    <h2>Các dự án của tôi🖼️</h2>
-
-    <div class="grid">
-
-        <div class="img-card">
-            <img src="https://github.com/Milomilo1710/anhtho/blob/main/duan1.png?raw=true">
-            <p>Portfolio cá nhân</p>
-        </div>
-
-        <div class="img-card">
-            <img src="https://github.com/Milomilo1710/anhtho/blob/main/duan2.jpg?raw=true">
-            <p>Thiết kế ứng dụng</p>
-        </div>
-
-        <div class="img-card">
-            <img src="https://github.com/Milomilo1710/anhtho/blob/main/duan3.jpg?raw=true">
-            <p>Dự án sáng tạo game studio</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- SKILLS -->
-<section>
-    <h2>Skills & Experience😎</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>💙Kỹ năng:</h3>
-            <p>HTML, CSS (thiết kế web cơ bản)</p>
-            <p>Photoshop, Illustrator (thiết kế đồ họa)</p>
-            <p>Blender (thiết kế 3D)</p>
-        </div>
-
-        <div class="card">
-            <h3>📊Mức độ:</h3>
-            <p>UI/UX: ⭐⭐⭐⭐ - Có khả năng thiết kế giao diện hoàn chỉnh</p>
-            <p>Design: ⭐⭐⭐⭐ - Hiểu về màu sắc, bố cục</p>
-            <p>3D: ⭐⭐⭐ - Có nền tảng và đang phát triển</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-    <h2>Contact💌</h2>
-
-    <div class="card">
-        <p>Nếu bạn quan tâm đến các dự án của tôi hoặc muốn hợp tác, hãy liên hệ với tôi qua:</p>
-        <p>Email: nguyenanhtho@gmail.com</p>
-        <p>SĐT: 0397777777</p>
-        <a href="#" class="btn">🤙Liên hệ ngay🤙</a>
-    </div>
-</section>
+    </section>
 
 </body>
 </html>
