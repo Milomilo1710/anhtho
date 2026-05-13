@@ -109,54 +109,64 @@ section{
 
 .strength-title{ font-weight:600; }
 
-/* PROJECTS FIX TO */
-.projects{
-    display:grid;
-    grid-template-columns:repeat(3, minmax(300px, 1fr));
-    justify-content:center;
-    gap:40px;
+/* PROJECTS NEW */
+.projects-section{
     max-width:1200px;
     margin:auto;
 }
 
+.project-title{
+    font-size:32px;
+    margin-bottom:30px;
+    text-align:left;
+}
+
+/* ROW */
+.projects-row{
+    display:flex;
+    gap:30px;
+    margin-bottom:40px;
+}
+
+/* CARD */
 .project-card{
-    position:relative;
     overflow:hidden;
     border-radius:20px;
+    transition:0.4s;
 }
 
 .project-card img{
     width:100%;
-    height:260px; 
+    height:100%;
     object-fit:cover;
-    transition:0.5s;
+    transition:0.4s;
 }
 
 .project-card:hover img{
-    transform:scale(1.1);
+    transform:scale(1.08);
 }
 
-/* XEN KẼ */
-.project-card:nth-child(2),
-.project-card:nth-child(5){
-    transform:translateY(60px);
+/* ẢNH DỌC */
+.vertical{
+    width:30%;
+    height:420px;
 }
 
-.overlay{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    padding:20px;
-    background:rgba(0,0,0,0.6);
-    opacity:0;
-    transition:0.4s;
-    font-size:16px;
+/* ẢNH NGANG */
+.horizontal{
+    flex:1;
+    height:260px;
 }
 
-.project-card:hover .overlay{
-    opacity:1;
+/* XẾP TẦNG */
+.bottom-row .project-card:nth-child(2){
+    transform:translateY(40px);
 }
 
+.bottom-row .project-card:nth-child(3){
+    transform:translateY(80px);
+}
+    
 /* SKILLS */
 .skills{
     max-width:800px;
@@ -263,19 +273,44 @@ footer{
 </section>
 
 <!-- PROJECTS -->
-<section>
-    <h2 style="text-align:center; margin-bottom:40px;">📝Projects📝</h2>
+<section class="projects-section">
 
-    <div class="projects">
+    <h2 class="project-title">UI/UX</h2>
 
-        <div class="project-card glass"><img src="YOUR_PROJECT_1"><div class="overlay">Project 1</div></div>
-        <div class="project-card glass"><img src="YOUR_PROJECT_2"><div class="overlay">Project 2</div></div>
-        <div class="project-card glass"><img src="YOUR_PROJECT_3"><div class="overlay">Project 3</div></div>
-        <div class="project-card glass"><img src="YOUR_PROJECT_4"><div class="overlay">Project 4</div></div>
-        <div class="project-card glass"><img src="YOUR_PROJECT_5"><div class="overlay">Project 5</div></div>
-        <div class="project-card glass"><img src="YOUR_PROJECT_6"><div class="overlay">Project 6</div></div>
+    <!-- HÀNG TRÊN -->
+    <div class="projects-row top-row">
+
+        <div class="project-card vertical glass">
+            <img src="YOUR_PROJECT_1">
+        </div>
+
+        <div class="project-card vertical glass">
+            <img src="YOUR_PROJECT_2">
+        </div>
+
+        <div class="project-card vertical glass">
+            <img src="YOUR_PROJECT_3">
+        </div>
 
     </div>
+
+    <!-- HÀNG DƯỚI -->
+    <div class="projects-row bottom-row">
+
+        <div class="project-card horizontal glass">
+            <img src="YOUR_PROJECT_4">
+        </div>
+
+        <div class="project-card horizontal glass">
+            <img src="YOUR_PROJECT_5">
+        </div>
+
+        <div class="project-card horizontal glass">
+            <img src="YOUR_PROJECT_6">
+        </div>
+
+    </div>
+
 </section>
 
 <!-- SKILLS -->
