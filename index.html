@@ -2,9 +2,9 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Hero Section</title>
+    <title>Nguyễn Anh Thơ | UI/UX & 3D Designer</title>
 
-    <!-- Font Poppins -->
+    <!-- FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
@@ -17,88 +17,242 @@
         body {
             font-family: 'Poppins', sans-serif;
             background: #ffffff;
+            color: #222;
         }
 
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+        }
+
+        header h2 {
+            color: #ff4da6;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #87CEFA;
+        }
+
+        /* HERO */
         .hero {
-            position: relative;
-            height: 100vh;
+            height: 90vh;
             display: flex;
             align-items: center;
-            justify-content: center;
             padding: 0 10%;
-            overflow: hidden;
+            position: relative;
         }
 
-        /* Blob shape */
         .blob {
             position: absolute;
-            top: -100px;
             right: -100px;
+            top: -100px;
             width: 400px;
             height: 400px;
-            background: #87CEFA; /* Sky Blue */
+            background: #87CEFA;
             border-radius: 50% 40% 60% 70%;
-            filter: blur(40px);
-            z-index: 0;
+            filter: blur(50px);
         }
 
         .hero-content {
-            position: relative;
-            z-index: 1;
             max-width: 600px;
+            z-index: 1;
         }
 
         .hero h1 {
             font-size: 48px;
-            font-weight: 700;
-            color: #222;
             line-height: 1.4;
         }
 
         .highlight {
-            color: #ff4da6; /* Pink */
+            color: #ff4da6;
         }
 
         .hero p {
             margin: 20px 0;
-            font-size: 16px;
             color: #555;
         }
 
-        .cta-btn {
-            display: inline-block;
-            padding: 12px 28px;
+        .btn {
+            padding: 12px 25px;
             background: #87CEFA;
-            color: #fff;
+            color: white;
+            border-radius: 25px;
             text-decoration: none;
-            border-radius: 30px;
-            font-weight: 500;
             transition: 0.3s;
         }
 
-        .cta-btn:hover {
+        .btn:hover {
             background: #ff4da6;
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        h2.section-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        /* ABOUT */
+        .about p {
+            max-width: 700px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* PROJECTS */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #f9f9f9;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 15px;
+        }
+
+        /* CONTACT */
+        .contact p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f5f5f5;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <div class="blob"></div>
+<!-- HEADER -->
+<header>
+    <h2>Anh Thơ</h2>
+    <nav>
+        <a href="#home">Trang chủ</a>
+        <a href="#about">Giới thiệu</a>
+        <a href="#projects">Dự án</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+</header>
 
-        <div class="hero-content">
-            <h1>
-                Thiết kế <span class="highlight">UI/UX hiện đại</span><br>
-                cho trải nghiệm <span class="highlight">đỉnh cao</span>
-            </h1>
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="blob"></div>
 
-            <p>
-                Tạo ra những sản phẩm số đẹp mắt, dễ sử dụng và mang lại cảm xúc tốt nhất cho người dùng.
-            </p>
+    <div class="hero-content">
+        <h1>
+            Xin chào, tôi là <span class="highlight">Nguyễn Anh Thơ</span><br>
+            Nhà thiết kế <span class="highlight">UI/UX & 3D</span>
+        </h1>
 
-            <a href="#" class="cta-btn">Bắt đầu ngay</a>
+        <p>
+            Tôi tạo ra những trải nghiệm số hiện đại, tinh tế và mang tính ứng dụng cao.
+            Với sự kết hợp giữa thẩm mỹ và tư duy thiết kế, tôi giúp sản phẩm trở nên nổi bật
+            và thân thiện với người dùng.
+        </p>
+
+        <a href="#projects" class="btn">Xem dự án</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <h2 class="section-title">Giới thiệu</h2>
+    <p>
+        Tôi là một nhà thiết kế UI/UX và 3D với niềm đam mê tạo ra những sản phẩm
+        không chỉ đẹp mà còn có giá trị sử dụng thực tế. Tôi luôn chú trọng đến trải nghiệm người dùng,
+        từ cách bố trí giao diện đến từng chi tiết nhỏ nhất trong tương tác.
+
+        Trong quá trình học tập và làm việc, tôi đã thực hiện nhiều dự án thiết kế
+        từ website, ứng dụng di động đến mô hình 3D. Tôi luôn không ngừng học hỏi
+        và cập nhật xu hướng thiết kế mới để nâng cao kỹ năng của mình.
+    </p>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+    <h2 class="section-title">Dự án</h2>
+
+    <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
+        <div class="project-card">
+            <!-- 👉 DÁN LINK ẢNH GITHUB Ở ĐÂY -->
+            <img src="LINK_ANH_CUA_BAN_1" alt="Project 1">
+
+            <div class="project-content">
+                <h3>Ứng dụng Mobile UI</h3>
+                <p>Thiết kế giao diện ứng dụng hiện đại với trải nghiệm mượt mà.</p>
+            </div>
         </div>
-    </section>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card">
+            <!-- 👉 DÁN LINK ẢNH GITHUB Ở ĐÂY -->
+            <img src="LINK_ANH_CUA_BAN_2" alt="Project 2">
+
+            <div class="project-content">
+                <h3>Website Portfolio</h3>
+                <p>Thiết kế website cá nhân với phong cách tối giản và tinh tế.</p>
+            </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-card">
+            <!-- 👉 DÁN LINK ẢNH GITHUB Ở ĐÂY -->
+            <img src="LINK_ANH_CUA_BAN_3" alt="Project 3">
+
+            <div class="project-content">
+                <h3>3D Design</h3>
+                <p>Mô hình 3D với ánh sáng và chất liệu chân thực.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2 class="section-title">Liên hệ</h2>
+
+    <p>Email: nguyentho@example.com</p>
+    <p>Behance: behance.net/anhtho</p>
+    <p>Facebook: fb.com/anhtho</p>
+</section>
+
+<footer>
+    © 2026 Nguyễn Anh Thơ. All rights reserved.
+</footer>
 
 </body>
 </html>
