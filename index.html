@@ -1,27 +1,344 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio Designer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#6ecbff,#ff9ad5);
+    color:#fff;
+}
+
+/* GLASS */
+.glass{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.2);
+}
+
+section{
+    padding:80px 10%;
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:100vh;
+}
+
+.hero-text{
+    max-width:650px;
+}
+
+.hero h1{
+    font-size:52px;
+}
+
+.hero h2{
+    font-weight:300;
+    margin:10px 0;
+}
+
+.hero p{
+    margin-top:20px;
+    line-height:1.8;
+}
+
+.btn{
+    margin-top:25px;
+    display:inline-block;
+    padding:12px 25px;
+    background:#fff;
+    color:#333;
+    border-radius:30px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+.hero-img img{
+    width:350px;
+    border-radius:20px;
+}
+
+/* ABOUT */
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.card{
+    padding:35px;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* STRENGTHS */
+.strengths{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.strength-card{
+    padding:25px;
+    text-align:center;
+    transition:0.4s;
+}
+
+.strength-card:hover{
+    transform:translateY(-10px) scale(1.05);
+}
+
+/* PROJECTS */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(3, 300px);
+    justify-content:center;
+    gap:30px;
+}
+
+.project-card{
+    position:relative;
+    overflow:hidden;
+}
+
+.project-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.project-card:hover img{
+    transform:scale(1.1);
+}
+
+/* XEN KẼ */
+.project-card:nth-child(2),
+.project-card:nth-child(5){
+    transform:translateY(40px);
+}
+
+.overlay{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:15px;
+    background:rgba(0,0,0,0.6);
+    opacity:0;
+    transition:0.4s;
+}
+
+.project-card:hover .overlay{
+    opacity:1;
+}
+
+/* SKILLS */
+.skills-new{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:30px;
+}
+
+.skill-group{
+    padding:25px;
+}
+
+.tags{
+    margin-top:15px;
+}
+
+.tags span{
+    display:inline-block;
+    padding:8px 15px;
+    margin:5px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.2);
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.tags span:hover{
+    background:#fff;
+    color:#333;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Nguyễn Anh Thơ</h1>
+        <h2>UI/UX Designer • 3D Designer</h2>
+
+        <p>
+            Tôi không bắt đầu với việc thiết kế cho đẹp, mà bắt đầu bằng việc hiểu cảm xúc của người dùng.
+            Mỗi sản phẩm tôi tạo ra đều là sự kết hợp giữa logic và nghệ thuật — nơi trải nghiệm và thẩm mỹ hòa làm một.
+
+            Từ những wireframe đơn giản đến các sản phẩm hoàn chỉnh, tôi luôn tìm cách tạo ra những trải nghiệm có chiều sâu,
+            dễ sử dụng và mang đậm dấu ấn cá nhân.
+
+            Với UI/UX, tôi thiết kế hành trình. Với 3D, tôi tạo ra không gian.
+            Và khi kết hợp cả hai, tôi tạo ra những sản phẩm thực sự “có hồn”.
+        </p>
+
+        <a href="#contact" class="btn">Let’s Work Together</a>
+    </div>
+
+    <div class="hero-img">
+        <!-- CHÈN ẢNH CÁ NHÂN -->
+        <img src="YOUR_IMAGE_LINK">
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+    <div class="card glass">
+        <h2>About Me</h2>
+        <p>
+            Tôi là một designer luôn tìm kiếm sự cân bằng giữa trải nghiệm người dùng và thẩm mỹ.
+            Tôi tin rằng một sản phẩm tốt không chỉ đẹp mà còn phải mang lại giá trị thực sự.
+
+            Tôi yêu việc phân tích hành vi người dùng, xây dựng flow và biến nó thành giao diện trực quan.
+            Ngoài ra, tôi còn đam mê 3D design — nơi tôi có thể tự do sáng tạo và thể hiện cá tính riêng.
+        </p>
+    </div>
+
+    <div class="card glass">
+        <h2>My Direction</h2>
+        <p>
+            Mục tiêu của tôi là trở thành một Product Designer toàn diện.
+            Tôi không chỉ muốn thiết kế giao diện mà còn muốn hiểu sản phẩm, người dùng và cách nó hoạt động.
+
+            Tôi luôn học hỏi, thử nghiệm và cải thiện mỗi ngày để tạo ra những sản phẩm có giá trị lâu dài.
+        </p>
+    </div>
+</section>
+
+<!-- STRENGTHS -->
 <section>
     <h2 style="text-align:center; margin-bottom:30px;">Strengths</h2>
 
     <div class="strengths">
+        <div class="strength-card glass">UI/UX Design</div>
+        <div class="strength-card glass">3D Modeling</div>
+        <div class="strength-card glass">Wireframe & Prototype</div>
+        <div class="strength-card glass">Tools: Figma, Blender, Photoshop</div>
+    </div>
+</section>
 
-        <div class="strength-card glass">
-            <h3>UI/UX Design</h3>
-            <p>Thiết kế trải nghiệm người dùng, tối ưu flow và usability.</p>
+<!-- PROJECTS -->
+<section>
+    <h2 style="text-align:center; margin-bottom:30px;">Projects</h2>
+
+    <div class="projects">
+
+        <div class="project-card glass"><img src="YOUR_PROJECT_1"><div class="overlay">Project 1</div></div>
+        <div class="project-card glass"><img src="YOUR_PROJECT_2"><div class="overlay">Project 2</div></div>
+        <div class="project-card glass"><img src="YOUR_PROJECT_3"><div class="overlay">Project 3</div></div>
+        <div class="project-card glass"><img src="YOUR_PROJECT_4"><div class="overlay">Project 4</div></div>
+        <div class="project-card glass"><img src="YOUR_PROJECT_5"><div class="overlay">Project 5</div></div>
+        <div class="project-card glass"><img src="YOUR_PROJECT_6"><div class="overlay">Project 6</div></div>
+
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+    <h2 style="text-align:center;">Skills</h2>
+
+    <div class="skills-new">
+
+        <div class="skill-group glass">
+            <h3>Design</h3>
+            <div class="tags">
+                <span>UI Design</span>
+                <span>UX Research</span>
+                <span>Wireframe</span>
+                <span>Prototype</span>
+            </div>
         </div>
 
-        <div class="strength-card glass">
-            <h3>3D Modeling</h3>
-            <p>Tạo mô hình 3D, ánh sáng và render mang tính thẩm mỹ cao.</p>
+        <div class="skill-group glass">
+            <h3>3D</h3>
+            <div class="tags">
+                <span>Modeling</span>
+                <span>Lighting</span>
+                <span>Rendering</span>
+            </div>
         </div>
 
-        <div class="strength-card glass">
-            <h3>Wireframe & Prototype</h3>
-            <p>Xây dựng cấu trúc sản phẩm và prototype tương tác.</p>
-        </div>
-
-        <div class="strength-card glass">
+        <div class="skill-group glass">
             <h3>Tools</h3>
-            <p>Figma, Blender, Photoshop</p>
+            <div class="tags">
+                <span>Figma</span>
+                <span>Blender</span>
+                <span>Photoshop</span>
+            </div>
         </div>
 
     </div>
 </section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2>Let’s Work Together</h2>
+
+    <form class="glass" style="padding:30px; max-width:500px; margin:auto;">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button class="btn">Send</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Portfolio Designer
+</footer>
+
+</body>
+</html>
