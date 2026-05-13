@@ -33,20 +33,19 @@ section{
     padding:80px 8%;
 }
 
-/* HERO FIX CHUẨN */
+/* HERO FIX XỊN */
 .hero{
-    position:relative;
     display:flex;
     align-items:center;
+    justify-content:space-between;
     min-height:100vh;
-    padding-left:8%;
-    overflow:hidden;
+    gap:40px;
 }
 
 /* TEXT */
 .hero-text{
+    flex:1;
     max-width:600px;
-    z-index:2;
 }
 
 .hero h1{ font-size:52px; }
@@ -71,22 +70,21 @@ section{
 
 .btn:hover{ transform:scale(1.1); }
 
-/* ẢNH TO */
+/* ẢNH TO NHƯNG KHÔNG PHÁ LAYOUT */
 .hero-img{
-    position:absolute;
-    top:0;
-    right:0;
-    width:50%;
-    height:100%;
+    flex:1;
+    position:relative;
+    height:500px;
 }
 
 .hero-img img{
     width:100%;
     height:100%;
     object-fit:cover;
+    border-radius:30px;
 }
 
-/* FADE */
+/* FADE MỜ NHẸ */
 .hero-img::after{
     content:"";
     position:absolute;
@@ -94,7 +92,8 @@ section{
     left:0;
     width:100%;
     height:100%;
-    background: linear-gradient(to left, transparent, rgba(110,203,255,1) 80%);
+    border-radius:30px;
+    background: linear-gradient(to left, transparent 40%, rgba(110,203,255,0.9));
 }
 
 /* ABOUT */
@@ -133,7 +132,6 @@ section{
 .projects{
     display:grid;
     grid-template-columns:repeat(3, minmax(300px, 1fr));
-    justify-content:center;
     gap:40px;
     max-width:1200px;
     margin:auto;
@@ -161,20 +159,6 @@ section{
     transform:translateY(60px);
 }
 
-.overlay{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    padding:20px;
-    background:rgba(0,0,0,0.6);
-    opacity:0;
-    transition:0.4s;
-}
-
-.project-card:hover .overlay{
-    opacity:1;
-}
-
 /* SKILLS */
 .skills{
     max-width:800px;
@@ -186,7 +170,6 @@ section{
 .skill-title{
     display:flex;
     justify-content:space-between;
-    margin-bottom:8px;
 }
 
 .progress{
@@ -199,9 +182,7 @@ section{
 .progress span{
     display:block;
     height:100%;
-    border-radius:20px;
     background: linear-gradient(90deg,#6ecbff,#ff9ad5);
-    animation: load 2s;
 }
 
 /* CONTACT */
@@ -220,10 +201,6 @@ footer{
     padding:20px;
 }
 
-@keyframes load{
-    from{width:0;}
-}
-
 </style>
 </head>
 
@@ -237,7 +214,7 @@ footer{
 
         <p>
             ✒️Tôi không bắt đầu với việc thiết kế cho đẹp, mà bắt đầu bằng việc hiểu cảm xúc của người dùng. 
-            Mỗi sản phẩm tôi tạo ra đều là sự kết hợp giữa logic và nghệ thuật.
+            Mỗi sản phẩm là sự kết hợp giữa logic và nghệ thuật.
         </p>
 
         <a href="#contact" class="btn">Let’s Work Together</a>
@@ -303,22 +280,6 @@ footer{
         </div>
     </div>
 </section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-    <h2>💌Let’s Work Together💌</h2>
-
-    <form class="glass" style="padding:30px; max-width:500px; margin:auto;">
-        <input type="text">
-        <input type="email">
-        <textarea></textarea>
-        <button class="btn">Send</button>
-    </form>
-</section>
-
-<footer>
-    © 2026 Portfolio Designer
-</footer>
 
 </body>
 </html>
