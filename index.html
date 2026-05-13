@@ -29,7 +29,7 @@ body{
 }
 
 section{
-    padding:80px 10%;
+    padding:80px 8%;
 }
 
 /* HERO */
@@ -40,23 +40,13 @@ section{
     min-height:100vh;
 }
 
-.hero-text{
-    max-width:650px;
-}
+.hero-text{ max-width:650px; }
 
-.hero h1{
-    font-size:52px;
-}
+.hero h1{ font-size:52px; }
 
-.hero h2{
-    font-weight:300;
-    margin:10px 0;
-}
+.hero h2{ font-weight:300; margin:10px 0; }
 
-.hero p{
-    margin-top:20px;
-    line-height:1.8;
-}
+.hero p{ margin-top:20px; line-height:1.8; }
 
 .btn{
     margin-top:25px;
@@ -69,9 +59,7 @@ section{
     transition:0.3s;
 }
 
-.btn:hover{
-    transform:scale(1.1);
-}
+.btn:hover{ transform:scale(1.1); }
 
 .hero-img img{
     width:350px;
@@ -90,11 +78,9 @@ section{
     transition:0.4s;
 }
 
-.card:hover{
-    transform:translateY(-10px);
-}
+.card:hover{ transform:translateY(-10px); }
 
-/* STRENGTHS NEW */
+/* STRENGTHS */
 .strengths{
     max-width:800px;
     margin:auto;
@@ -108,30 +94,29 @@ section{
     transition:0.3s;
 }
 
-.strength-item:hover{
-    transform:scale(1.03);
-}
+.strength-item:hover{ transform:scale(1.03); }
 
-.strength-title{
-    font-weight:600;
-}
+.strength-title{ font-weight:600; }
 
-/* PROJECTS */
+/* PROJECTS FIX TO */
 .projects{
     display:grid;
-    grid-template-columns:repeat(3, 300px);
+    grid-template-columns:repeat(3, minmax(300px, 1fr));
     justify-content:center;
-    gap:30px;
+    gap:40px;
+    max-width:1200px;
+    margin:auto;
 }
 
 .project-card{
     position:relative;
     overflow:hidden;
+    border-radius:20px;
 }
 
 .project-card img{
     width:100%;
-    height:200px;
+    height:260px; /* 👈 TĂNG CHIỀU CAO */
     object-fit:cover;
     transition:0.5s;
 }
@@ -143,32 +128,31 @@ section{
 /* XEN KẼ */
 .project-card:nth-child(2),
 .project-card:nth-child(5){
-    transform:translateY(40px);
+    transform:translateY(60px);
 }
 
 .overlay{
     position:absolute;
     bottom:0;
     width:100%;
-    padding:15px;
+    padding:20px;
     background:rgba(0,0,0,0.6);
     opacity:0;
     transition:0.4s;
+    font-size:16px;
 }
 
 .project-card:hover .overlay{
     opacity:1;
 }
 
-/* SKILLS NEW */
+/* SKILLS */
 .skills{
     max-width:800px;
     margin:auto;
 }
 
-.skill{
-    margin:20px 0;
-}
+.skill{ margin:20px 0; }
 
 .skill-title{
     display:flex;
@@ -192,9 +176,7 @@ section{
 }
 
 /* CONTACT */
-.contact{
-    text-align:center;
-}
+.contact{ text-align:center; }
 
 input, textarea{
     width:100%;
@@ -209,7 +191,6 @@ footer{
     padding:20px;
 }
 
-/* ANIMATION */
 @keyframes load{
     from{width:0;}
 }
@@ -226,13 +207,8 @@ footer{
         <h2>UI/UX Designer • 3D Designer</h2>
 
         <p>
-            Tôi không bắt đầu với việc thiết kế cho đẹp, mà bắt đầu bằng việc hiểu cảm xúc của người dùng.
-            Mỗi sản phẩm tôi tạo ra đều là sự kết hợp giữa logic và nghệ thuật.
-
-            Từ wireframe đến sản phẩm hoàn chỉnh, tôi luôn tạo ra trải nghiệm có chiều sâu và dễ sử dụng.
-
-            Với UI/UX, tôi thiết kế hành trình. Với 3D, tôi tạo ra không gian.
-            Và khi kết hợp cả hai — tôi tạo ra sản phẩm có hồn.
+            Tôi thiết kế không chỉ để đẹp mà để tạo cảm xúc.
+            Mỗi trải nghiệm là một câu chuyện — và tôi là người kể chuyện bằng giao diện.
         </p>
 
         <a href="#contact" class="btn">Let’s Work Together</a>
@@ -247,55 +223,30 @@ footer{
 <section class="about">
     <div class="card glass">
         <h2>About Me</h2>
-        <p>
-            Tôi là một designer tập trung vào trải nghiệm người dùng và thẩm mỹ.
-            Tôi luôn tìm cách tạo ra sản phẩm vừa đẹp vừa hiệu quả.
-
-            Ngoài UI/UX, tôi còn đam mê 3D design để thể hiện sự sáng tạo.
-        </p>
+        <p>Tôi tập trung vào trải nghiệm người dùng và thẩm mỹ hiện đại.</p>
     </div>
 
     <div class="card glass">
         <h2>My Direction</h2>
-        <p>
-            Mục tiêu của tôi là trở thành Product Designer toàn diện.
-            Tôi muốn tạo ra sản phẩm có giá trị lâu dài và tác động thật.
-        </p>
+        <p>Mục tiêu trở thành Product Designer toàn diện.</p>
     </div>
 </section>
 
 <!-- STRENGTHS -->
 <section>
-    <h2 style="text-align:center; margin-bottom:30px;">Strengths</h2>
+    <h2 style="text-align:center;">Strengths</h2>
 
     <div class="strengths">
-
-        <div class="strength-item glass">
-            <span class="strength-title">UI/UX Design</span>
-            <span>Experience Design</span>
-        </div>
-
-        <div class="strength-item glass">
-            <span class="strength-title">3D Modeling</span>
-            <span>Visual & Rendering</span>
-        </div>
-
-        <div class="strength-item glass">
-            <span class="strength-title">Wireframe & Prototype</span>
-            <span>Product Flow</span>
-        </div>
-
-        <div class="strength-item glass">
-            <span class="strength-title">Tools</span>
-            <span>Figma • Blender • Photoshop</span>
-        </div>
-
+        <div class="strength-item glass"><span class="strength-title">UI/UX Design</span><span>Experience</span></div>
+        <div class="strength-item glass"><span class="strength-title">3D Modeling</span><span>Visual</span></div>
+        <div class="strength-item glass"><span class="strength-title">Wireframe</span><span>Flow</span></div>
+        <div class="strength-item glass"><span class="strength-title">Tools</span><span>Figma • Blender</span></div>
     </div>
 </section>
 
 <!-- PROJECTS -->
 <section>
-    <h2 style="text-align:center; margin-bottom:30px;">Projects</h2>
+    <h2 style="text-align:center; margin-bottom:40px;">Projects</h2>
 
     <div class="projects">
 
@@ -316,26 +267,17 @@ footer{
     <div class="skills">
 
         <div class="skill">
-            <div class="skill-title">
-                <span>UI/UX Design</span>
-                <span>90%</span>
-            </div>
+            <div class="skill-title"><span>UI/UX Design</span><span>90%</span></div>
             <div class="progress"><span style="width:90%"></span></div>
         </div>
 
         <div class="skill">
-            <div class="skill-title">
-                <span>3D Modeling</span>
-                <span>85%</span>
-            </div>
+            <div class="skill-title"><span>3D Modeling</span><span>85%</span></div>
             <div class="progress"><span style="width:85%"></span></div>
         </div>
 
         <div class="skill">
-            <div class="skill-title">
-                <span>Wireframe & Prototype</span>
-                <span>80%</span>
-            </div>
+            <div class="skill-title"><span>Prototype</span><span>80%</span></div>
             <div class="progress"><span style="width:80%"></span></div>
         </div>
 
