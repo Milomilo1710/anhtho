@@ -94,21 +94,26 @@ section{
     transform:translateY(-10px);
 }
 
-/* STRENGTHS */
+/* STRENGTHS NEW */
 .strengths{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+    max-width:800px;
+    margin:auto;
 }
 
-.strength-card{
-    padding:25px;
-    text-align:center;
-    transition:0.4s;
+.strength-item{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 30px;
+    margin:15px 0;
+    transition:0.3s;
 }
 
-.strength-card:hover{
-    transform:translateY(-10px) scale(1.05);
+.strength-item:hover{
+    transform:scale(1.03);
+}
+
+.strength-title{
+    font-weight:600;
 }
 
 /* PROJECTS */
@@ -155,35 +160,35 @@ section{
     opacity:1;
 }
 
-/* SKILLS */
-.skills-new{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-    margin-top:30px;
+/* SKILLS NEW */
+.skills{
+    max-width:800px;
+    margin:auto;
 }
 
-.skill-group{
-    padding:25px;
+.skill{
+    margin:20px 0;
 }
 
-.tags{
-    margin-top:15px;
+.skill-title{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
 }
 
-.tags span{
-    display:inline-block;
-    padding:8px 15px;
-    margin:5px;
-    border-radius:20px;
+.progress{
+    height:10px;
     background:rgba(255,255,255,0.2);
-    transition:0.3s;
-    cursor:pointer;
+    border-radius:20px;
+    overflow:hidden;
 }
 
-.tags span:hover{
-    background:#fff;
-    color:#333;
+.progress span{
+    display:block;
+    height:100%;
+    border-radius:20px;
+    background: linear-gradient(90deg,#6ecbff,#ff9ad5);
+    animation: load 2s;
 }
 
 /* CONTACT */
@@ -204,6 +209,11 @@ footer{
     padding:20px;
 }
 
+/* ANIMATION */
+@keyframes load{
+    from{width:0;}
+}
+
 </style>
 </head>
 
@@ -217,20 +227,18 @@ footer{
 
         <p>
             Tôi không bắt đầu với việc thiết kế cho đẹp, mà bắt đầu bằng việc hiểu cảm xúc của người dùng.
-            Mỗi sản phẩm tôi tạo ra đều là sự kết hợp giữa logic và nghệ thuật — nơi trải nghiệm và thẩm mỹ hòa làm một.
+            Mỗi sản phẩm tôi tạo ra đều là sự kết hợp giữa logic và nghệ thuật.
 
-            Từ những wireframe đơn giản đến các sản phẩm hoàn chỉnh, tôi luôn tìm cách tạo ra những trải nghiệm có chiều sâu,
-            dễ sử dụng và mang đậm dấu ấn cá nhân.
+            Từ wireframe đến sản phẩm hoàn chỉnh, tôi luôn tạo ra trải nghiệm có chiều sâu và dễ sử dụng.
 
             Với UI/UX, tôi thiết kế hành trình. Với 3D, tôi tạo ra không gian.
-            Và khi kết hợp cả hai, tôi tạo ra những sản phẩm thực sự “có hồn”.
+            Và khi kết hợp cả hai — tôi tạo ra sản phẩm có hồn.
         </p>
 
         <a href="#contact" class="btn">Let’s Work Together</a>
     </div>
 
     <div class="hero-img">
-        <!-- CHÈN ẢNH CÁ NHÂN -->
         <img src="YOUR_IMAGE_LINK">
     </div>
 </section>
@@ -240,21 +248,18 @@ footer{
     <div class="card glass">
         <h2>About Me</h2>
         <p>
-            Tôi là một designer luôn tìm kiếm sự cân bằng giữa trải nghiệm người dùng và thẩm mỹ.
-            Tôi tin rằng một sản phẩm tốt không chỉ đẹp mà còn phải mang lại giá trị thực sự.
+            Tôi là một designer tập trung vào trải nghiệm người dùng và thẩm mỹ.
+            Tôi luôn tìm cách tạo ra sản phẩm vừa đẹp vừa hiệu quả.
 
-            Tôi yêu việc phân tích hành vi người dùng, xây dựng flow và biến nó thành giao diện trực quan.
-            Ngoài ra, tôi còn đam mê 3D design — nơi tôi có thể tự do sáng tạo và thể hiện cá tính riêng.
+            Ngoài UI/UX, tôi còn đam mê 3D design để thể hiện sự sáng tạo.
         </p>
     </div>
 
     <div class="card glass">
         <h2>My Direction</h2>
         <p>
-            Mục tiêu của tôi là trở thành một Product Designer toàn diện.
-            Tôi không chỉ muốn thiết kế giao diện mà còn muốn hiểu sản phẩm, người dùng và cách nó hoạt động.
-
-            Tôi luôn học hỏi, thử nghiệm và cải thiện mỗi ngày để tạo ra những sản phẩm có giá trị lâu dài.
+            Mục tiêu của tôi là trở thành Product Designer toàn diện.
+            Tôi muốn tạo ra sản phẩm có giá trị lâu dài và tác động thật.
         </p>
     </div>
 </section>
@@ -264,10 +269,27 @@ footer{
     <h2 style="text-align:center; margin-bottom:30px;">Strengths</h2>
 
     <div class="strengths">
-        <div class="strength-card glass">UI/UX Design</div>
-        <div class="strength-card glass">3D Modeling</div>
-        <div class="strength-card glass">Wireframe & Prototype</div>
-        <div class="strength-card glass">Tools: Figma, Blender, Photoshop</div>
+
+        <div class="strength-item glass">
+            <span class="strength-title">UI/UX Design</span>
+            <span>Experience Design</span>
+        </div>
+
+        <div class="strength-item glass">
+            <span class="strength-title">3D Modeling</span>
+            <span>Visual & Rendering</span>
+        </div>
+
+        <div class="strength-item glass">
+            <span class="strength-title">Wireframe & Prototype</span>
+            <span>Product Flow</span>
+        </div>
+
+        <div class="strength-item glass">
+            <span class="strength-title">Tools</span>
+            <span>Figma • Blender • Photoshop</span>
+        </div>
+
     </div>
 </section>
 
@@ -291,34 +313,30 @@ footer{
 <section>
     <h2 style="text-align:center;">Skills</h2>
 
-    <div class="skills-new">
+    <div class="skills">
 
-        <div class="skill-group glass">
-            <h3>Design</h3>
-            <div class="tags">
-                <span>UI Design</span>
-                <span>UX Research</span>
-                <span>Wireframe</span>
-                <span>Prototype</span>
+        <div class="skill">
+            <div class="skill-title">
+                <span>UI/UX Design</span>
+                <span>90%</span>
             </div>
+            <div class="progress"><span style="width:90%"></span></div>
         </div>
 
-        <div class="skill-group glass">
-            <h3>3D</h3>
-            <div class="tags">
-                <span>Modeling</span>
-                <span>Lighting</span>
-                <span>Rendering</span>
+        <div class="skill">
+            <div class="skill-title">
+                <span>3D Modeling</span>
+                <span>85%</span>
             </div>
+            <div class="progress"><span style="width:85%"></span></div>
         </div>
 
-        <div class="skill-group glass">
-            <h3>Tools</h3>
-            <div class="tags">
-                <span>Figma</span>
-                <span>Blender</span>
-                <span>Photoshop</span>
+        <div class="skill">
+            <div class="skill-title">
+                <span>Wireframe & Prototype</span>
+                <span>80%</span>
             </div>
+            <div class="progress"><span style="width:80%"></span></div>
         </div>
 
     </div>
