@@ -6,63 +6,152 @@ Vai trò: Designer + chỉnh sửa + tối ưu kết quả AI
 ChatGPT (tạo ý tưởng + prompt + code HTML/CSS)
 Canva
 3. Ví dụ Prompt đã dùng
-Prompt tạo layout UI:
 
-Thiết kế một trang portfolio UI/UX hiện đại cho một sinh viên tên “Nguyễn Anh Thơ”, phong cách nữ tính, dễ thương, màu pastel (hồng + xanh dương gradient), bố cục gọn gàng, thân thiện.
-Trang web gồm các section:
-HERO: tên lớn “Nguyễn Anh Thơ”, tagline “UI/UX Designer tương lai | Đam mê thiết kế & sáng tạo”, nền gradient hồng xanh, cảm giác trẻ trung, nổi bật.
-ABOUT ME: khối nội dung bo góc, nền trắng, mô tả ngắn về người học UI/UX và 3D, phong cách tối giản.
-PROJECTS: 2 card dự án (UI App Design, 3D Character), mỗi card có tiêu đề, mô tả ngắn và vai trò, hiệu ứng hover nâng nhẹ.
-GALLERY: lưới 3 hình project, card bo góc, shadow nhẹ, có caption bên dưới từng ảnh.
-SKILLS: chia 2 cột, một bên kỹ năng (HTML, CSS, Photoshop, Illustrator, Blender), một bên mức độ đánh giá sao.
-CONTACT: thông tin email, số điện thoại, nút “Liên hệ ngay” dạng button bo tròn màu hồng.
-Phong cách UI:
-Bo góc mềm (rounded corners)
-Shadow nhẹ hiện đại
-Hiệu ứng hover mượt
-Typography dùng font Poppins
-Responsive layout (desktop trước, mobile sau)
-Cảm giác dễ thương nhưng vẫn chuyên nghiệp
 
-Prompt tạo ảnh minh họa trên Canva:
+Hãy tạo một website portfolio cá nhân hiện đại dành cho một UI/UX Designer kết hợp 3D Designer với phong cách **glassmorphism**, màu chủ đạo là gradient xanh da trời  và hồng . Thiết kế cần mang cảm giác sáng tạo, mềm mại nhưng vẫn chuyên nghiệp, tập trung vào trải nghiệm người dùng (UX) và tính thẩm mỹ (UI). 
 
-Ảnh 1: Thiết kế website portfolio hiện đại, giao diện người dùng/trải nghiệm người dùng (UI/UX), bố cục gọn gàng và tối giản, nền trắng và xám nhạt, kiểu chữ trang nhã, bố cục dạng lưới, khoảng cách mượt mà, các phần tương tác (giới thiệu, dự án, liên hệ), thẻ hiệu ứng kính, đổ bóng tinh tế, thẩm mỹ công nghệ cao cấp, thiết kế web đáp ứng, mô hình kiểu Figma, độ phân giải 4K, chi tiết cực cao, giới thiệu nhà thiết kế chuyên nghiệp.
+Yêu cầu bố cục gồm các phần sau:
 
-Ảnh 2: Thiết kế UI/UX ứng dụng di động phong cách dễ thương Gen Z, màu pastel nhẹ nhàng, icon vui nhộn, giao diện mềm mại bo tròn, sticker UI, phong cách, bố cục chat app và mạng xã hội, thiết kế hiện đại, Figma mockup, bố cục ngang 16:9, hiển thị toàn giao diện, 4k
+1. Hero Section 
 
-Ảnh 3: Thiết kế UI/UX desktop cho phần mềm sáng tạo hoặc game studio, giao diện hiện đại, hiệu ứng neon nhẹ, bảng điều khiển, thư viện dự án, thanh công cụ bên trái, phong cách sci-fi nhưng gọn gàng, UI chuyên nghiệp như phần mềm Adobe hoặc game engine, bố cục ngang 16:9, full desktop screen, 4k
+ Layout chia 2 cột: bên trái là nội dung, bên phải là ảnh chân dung (dạng dọc, bo góc, có viền gradient) 
+Tiêu đề lớn (tên cá nhân) 
+Subtitle: “UI/UX Designer • 3D Designer” 
+Đoạn mô tả mang tính storytelling (thiết kế dựa trên cảm xúc người dùng, kết hợp logic và nghệ thuật)
+Nút CTA: “Let’s Work Together”
+Chiều cao full màn hình (100vh)
+
+2. **About Section**
+
+ Chia 2 card dạng glass (bo góc, blur nền)
+Card 1: Giới thiệu bản thân (tư duy thiết kế, đam mê UX + 3D)
+Card 2: Định hướng (trở thành Product Designer, tập trung vào giá trị sản phẩm và người dùng)
+Hover effect nhẹ (nhấc card lên)
+
+3. Strengths Section 
+
+Danh sách các điểm mạnh dạng hàng ngang (glass card)
+Bao gồm: UI/UX Design, 3D Modeling, Wireframe, Tools
+Hiển thị dạng label + mô tả ngắn
+Hover scale nhẹ
+
+4. Projects Section
+
+Tiêu đề chính ở giữa
+Chia làm 2 nhóm:
+
+  a. UI/UX:
+
+  * 3 ảnh dọc đặt cạnh nhau
+  * Hiệu ứng hover zoom ảnh
+
+  b. 3D:
+
+  * Layout sáng tạo:
+    + 2 ảnh ngang phía trên
+    + 1 ảnh lớn phía dưới (center)
+  * Các card có bo góc + glass effect
+
+5. **Skills Section**
+
+* Thanh progress bar có animation load từ trái sang phải
+* Các kỹ năng:
+
+  * UI/UX Design (90%)
+    + 3D Modeling (85%)
+   Prototype (80%) 
+ Màu thanh là gradient xanh → hồng 
+
+6. Contact Section 
+
+ Form gồm: Name, Email, Message 
+Nút gửi dạng button bo tròn 
+Layout căn giữa, đặt trong card glass 
+
+7. Footer
+
+Nội dung đơn giản (© Portfolio Designer) 
+
+Yêu cầu kỹ thuật:
+
+Sử dụng HTML + CSS thuần 
+Font: Poppins (Google Fonts) 
+Sử dụng hiệu ứng: 
+
+  Glassmorphism (blur + border nhẹ) 
+  Hover animation (scale, translate) 
+  Image zoom 
+  Progress bar animation 
+ Responsive cơ bản 
+ Code rõ ràng, dễ chỉnh sửa 
+
+Mục tiêu tổng thể:
+Tạo một portfolio mang đậm dấu ấn cá nhân, thể hiện sự kết hợp giữa trải nghiệm người dùng (UX)** và thẩm mỹ thị giác (UI + 3D), tạo cảm giác chuyên nghiệp nhưng vẫn sáng tạo và có “cảm xúc”. 
 
 4. Quá trình chỉnh sửa kết quả AI
-Thêm mục Gallery dưới mục Project
-<!-- MY PROJECT GALLERY -->
-<section>
-    <h2>Các dự án của tôi 🖼️</h2>
+Thêm các link hình ảnh dưới mục Project
+-Code trước đó:
 
-    <div class="gallery">
+ảnh đại diện:
 
-        <div class="img-card">
-            <img src="https://via.placeholder.com/400x250" alt="Project 1">
-            <p>Dự án 1</p>
+	<div class="hero-img">
+        <img src="YOUR_IMAGE_LINK ">
+
+ảnh dự án UI/UX:
+
+	<div class="projects-top">
+            <div class="project-card vertical glass"><img src="YOUR_PROJECT_1"></div>
+            <div class="project-card vertical glass"><img src="YOUR_PROJECT_2"></div>
+            <div class="project-card vertical glass"><img src="YOUR_PROJECT_3"></div>
         </div>
 
-        <div class="img-card">
-            <img src="https://via.placeholder.com/400x250" alt="Project 2">
-            <p>Dự án 2</p>
+ảnh dự án 3D:
+
+	 <div class="projects-3d">
+
+            <!-- hàng trên -->
+            <div class="row-top">
+                <div class="project-card horizontal glass"><img src="YOUR_PROJECT_4"></div>
+                <div class="project-card horizontal glass"><img src="YOUR_PROJECT_5"></div>
+            </div>
+
+            <!-- ảnh dưới -->
+            <div class="row-bottom">
+                <div class="project-card big glass"><img src="YOUR_PROJECT_6"></div>
+            </div>
+
+
+-Code sau khi sửa:
+
+ảnh đại diện:
+
+	<div class="hero-img">
+        <img src="https://github.com/Milomilo1710/anhtho/blob/main/avatar.jpg?raw=true">
+
+ảnh dự án UI/UX:
+
+	<div class="projects-top">
+            <div class="project-card vertical glass"><img src="https://github.com/Milomilo1710/anhtho/blob/main/Home.jpg?raw=true"></div>
+            <div class="project-card vertical glass"><img src="https://github.com/Milomilo1710/anhtho/blob/main/Menu.jpg?raw=true"></div>
+            <div class="project-card vertical glass"><img src="https://github.com/Milomilo1710/anhtho/blob/main/chi%20ti%E1%BA%BFt%20s%E1%BA%A3n%20ph%E1%BA%A9m.jpg?raw=true"></div>
         </div>
 
-        <div class="img-card">
-            <img src="https://via.placeholder.com/400x250" alt="Project 3">
-            <p>Dự án 3</p>
-        </div>
+ảnh dự án 3D:
 
-    </div>
-</section>
+	 <div class="projects-3d">
+
+            <!-- hàng trên -->
+            <div class="row-top">
+                <div class="project-card horizontal glass"><img src="https://github.com/Milomilo1710/anhtho/blob/main/Screenshot%202026-04-07%20152345.png?raw=true"></div>
+                <div class="project-card horizontal glass"><img src="https://github.com/Milomilo1710/anhtho/blob/main/Screenshot%202026-04-07%20152750.png?raw=true"></div>
+            </div>
+
+            <!-- ảnh dưới -->
+            <div class="row-bottom">
+                <div class="project-card big glass"><img src="https://github.com/Milomilo1710/anhtho/blob/main/Screenshot%202026-04-07%20153134.png?raw=true"></div>
+            </div>
 
 5. Ý tưởng thiết kế tổng thể
-
 Phong cách: Đơn giản, dễ thương
-
-Màu chủ đạo: Hồng, xanh da trời, trắng
-
-Bố cục: Đối xứng
-
+Màu chủ đạo: Hồng, xanh da trời
+Bố cục: Đối xứng, ảnh dự án được bố trí xen kẽ
