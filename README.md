@@ -305,6 +305,13 @@ b)Thêm các link hình ảnh dưới mục Project:
             </div>
 
 5. Ý tưởng thiết kế tổng thể
+
 Phong cách: Đơn giản, dễ thương
+
 Màu chủ đạo: Hồng, xanh da trời
+
 Bố cục: Đối xứng, ảnh dự án được bố trí xen kẽ
+
+6. Video quá trình:
+
+https://drive.google.com/drive/folders/1N9OFolssSGAIEMByTt4OCvfBd6dkZCDb?usp=sharing
