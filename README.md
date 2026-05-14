@@ -88,8 +88,160 @@ Sử dụng hiệu ứng:
 Mục tiêu tổng thể:
 Tạo một portfolio mang đậm dấu ấn cá nhân, thể hiện sự kết hợp giữa trải nghiệm người dùng (UX)** và thẩm mỹ thị giác (UI + 3D), tạo cảm giác chuyên nghiệp nhưng vẫn sáng tạo và có “cảm xúc”. 
 
-4. Quá trình chỉnh sửa kết quả AI
-Thêm các link hình ảnh dưới mục Project
+4. Quá trình chỉnh sửa kết quả AI:
+a)Chỉnh sửa bố cục:
+
+-Code trước đó:
+
+-PHẦN HTML:
+
+	<section class="projects-section">
+
+    <h2 class="project-title">UI/UX</h2>
+
+    <!-- HÀNG TRÊN -->
+    <div class="projects-row top-row">
+        ...
+    </div>
+
+    <!-- HÀNG DƯỚI -->
+    <div class="projects-row bottom-row">
+        ...
+    </div>
+
+</section>
+
+-PHẦN CSS:
+
+	.project-title{...}
+.projects-row{...}
+.vertical{...}
+.horizontal{...}
+.bottom-row .project-card:nth-child(2){...}
+.bottom-row .project-card:nth-child(3){...}
+
+-Code sau khi sửa:
+
+-PHẦN HTML:
+
+	<section class="projects-section">
+
+    <!-- UI/UX -->
+    <div class="project-block">
+        <h2 class="project-label">UI/UX</h2>
+
+        <div class="projects-top">
+            <div class="project-card vertical glass"><img src="YOUR_PROJECT_1"></div>
+            <div class="project-card vertical glass"><img src="YOUR_PROJECT_2"></div>
+            <div class="project-card vertical glass"><img src="YOUR_PROJECT_3"></div>
+        </div>
+    </div>
+
+    <!-- 3D -->
+    <div class="project-block">
+        <h2 class="project-label">3D</h2>
+
+        <div class="projects-3d">
+
+            <!-- hàng trên -->
+            <div class="row-top">
+                <div class="project-card horizontal glass"><img src="YOUR_PROJECT_4"></div>
+                <div class="project-card horizontal glass"><img src="YOUR_PROJECT_5"></div>
+            </div>
+
+            <!-- ảnh dưới -->
+            <div class="row-bottom">
+                <div class="project-card big glass"><img src="YOUR_PROJECT_6"></div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+-PHẦN CSS:
+
+	/* PROJECTS NEW */
+.projects-section{
+    max-width:1200px;
+    margin:auto;
+}
+
+/* BLOCK */
+.project-block{
+    margin-bottom:80px;
+}
+
+/* TITLE LEFT */
+.project-label{
+    font-size:32px;
+    margin-bottom:25px;
+    text-align:left;
+}
+
+/* UI/UX */
+.projects-top{
+    display:flex;
+    gap:30px;
+}
+
+/* ẢNH DỌC */
+.vertical{
+    width:30%;
+    height:420px;
+}
+
+/* 3D LAYOUT */
+.projects-3d{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+/* HÀNG TRÊN */
+.row-top{
+    display:flex;
+    gap:30px;
+}
+
+/* ẢNH NGANG */
+.horizontal{
+    flex:1;
+    height:220px;
+}
+
+/* HÀNG DƯỚI */
+.row-bottom{
+    display:flex;
+    justify-content:center;
+}
+
+/* ẢNH TO DƯỚI */
+.big{
+    width:60%;
+    height:260px;
+}
+
+/* CARD */
+.project-card{
+    overflow:hidden;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.project-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.project-card:hover img{
+    transform:scale(1.08);
+}
+
+b)Thêm các link hình ảnh dưới mục Project:
 -Code trước đó:
 
 ảnh đại diện:
